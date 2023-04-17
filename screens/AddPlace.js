@@ -1,6 +1,6 @@
 import { Text, View } from "react-native";
 
-function ManagePlace() {
+function AddPlace() {
     return (
         <View>
             <Text>EditPlace</Text>
@@ -8,4 +8,4 @@ function ManagePlace() {
     )
 }
 
-export default ManagePlace;
+export default AddPlace;
