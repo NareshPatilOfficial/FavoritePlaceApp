@@ -16,9 +16,13 @@ function RootNavigation() {
                 <Stack.Screen
                     name="AllPlaces"
                     component={AllPlaces}
-                    options={{
-                        headerRight:({tintColor}) => <IconButton name={'add'} color={tintColor} size={22}/>
-                    }}
+                    options={({ navigation }) => ({
+                        headerRight: ({ tintColor }) =>
+                            <IconButton name={'add'}
+                                color={tintColor} size={22}
+                                onPress={() => navigation.navigate('AddPlace')}
+                            />
+                    })}
                 />
                 <Stack.Screen name="AddPlace" component={AddPlace} />
                 <Stack.Screen name="PlaceDetails" component={PlaceDetails} />
