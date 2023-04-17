@@ -10,9 +10,8 @@ function PlaceList({ places }) {
                 <Text>No places added yet, start adding some!</Text>
             </View>
         )
-
     }
-    
+
     return (
         <View>
             <FlatList
