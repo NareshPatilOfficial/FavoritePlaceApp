@@ -1,11 +1,18 @@
-import { Text, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
+import PlaceForm from "../components/places/PlaceForm";
 
 function AddPlace() {
     return (
-        <View>
-            <Text>EditPlace</Text>
+        <View style={styles.container}>
+            <PlaceForm />
         </View>
     )
 }
 
 export default AddPlace;
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1
+    }
+})
