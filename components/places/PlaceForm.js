@@ -1,5 +1,6 @@
 import { ScrollView, StyleSheet, TextInput, View, Text } from "react-native";
 import { Colors } from "../../constanst/colors";
+import ImagePicker from "./ImagePicker";
 
 function PlaceForm() {
     return (
@@ -7,6 +8,7 @@ function PlaceForm() {
             <View>
                 <Text style={styles.label}>asas</Text>
                 <TextInput style={styles.textInput} />
+                <ImagePicker />
             </View>
         </ScrollView>
     )
