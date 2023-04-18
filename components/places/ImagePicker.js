@@ -3,6 +3,7 @@ import Button from "../ui/Button";
 import { PermissionStatus, launchCameraAsync, launchImageLibraryAsync, useCameraPermissions } from "expo-image-picker";
 import { useState } from "react";
 import { Colors } from "../../constanst/colors";
+import OutlineButton from "../ui/OutlineButton";
 // import { PermissionsAndroid } from "react-native";
 // import * as Permissions from 'expo-permissions'
 
@@ -40,9 +41,7 @@ function ImagePicker() {
             return;
         }
 
-        const image = await launchCameraAsync({
-            // allowsEditing: true,
-            // aspect: [16, 9],
+        const image = await launchImageLibraryAsync({
             quality: 0.5
         });
         console.log('image', image.assets[0].uri);
@@ -60,7 +59,7 @@ function ImagePicker() {
             <View style={styles.imageContainer}>
                 {renderPickedImage()}
             </View>
-            <Button onPress={takeImageHandler}>Take photo</Button>
+            <OutlineButton onPress={() => {}} iconName={'camera'}>Take photo</OutlineButton>
         </View>
     )
 }
